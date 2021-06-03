@@ -11,7 +11,11 @@ export default class Home extends Component {
 		return (
 			<div className="home">
 				<TopBar city="杭州" showCitylayer={this.showCitylayer}/>
-				<PosterSlide />
+				<div className="home__slide">
+					<div className="home__slideWrap">
+						<PosterSlide data={[]}/>
+					</div>
+				</div>
 			</div>
 		);
 	};
