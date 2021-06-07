@@ -4,6 +4,8 @@ import TopBar from './components/TopBar'
 import PosterSlide from './components/slide'
 import MoiveItem from './components/moiveItem'
 import TabMenu from '../../components/TabMenu'
+import RenderRoBody from '../../components/RenderToBody'
+import CityLayer from './components/CityLayer'
 export default class Home extends Component {
 	showCitylayer = () => {
 		console.log(1111);
@@ -24,6 +26,7 @@ export default class Home extends Component {
 					<li><MoiveItem/></li>
 				</ul>
 				<TabMenu current='movie' />
+				<RenderRoBody><CityLayer/></RenderRoBody>
 			</div>
 		);
 	};
