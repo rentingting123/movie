@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import './CityLayer.css'
 export default class CityLayer extends Component {
-    static propTypes = {
-        prop: PropTypes
-    }
+    // static propTypes = {
+    //     prop: PropTypes
+    // }
     // const onClose = () => {
     //     console.log(111);
     // }

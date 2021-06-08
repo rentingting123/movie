@@ -6,11 +6,19 @@ import MoiveItem from './components/moiveItem'
 import TabMenu from '../../components/TabMenu'
 import RenderRoBody from '../../components/RenderToBody'
 import CityLayer from './components/CityLayer'
+import request from '../../helpers/request';
+
 export default class Home extends Component {
 	showCitylayer = () => {
 		console.log(1111);
 	}
-
+	componentWillUnmount(){
+		this.getData();
+	}
+	getData = async() =>{
+		const data = await request('/index');
+		console.log(data);
+	}
 	render() {
 		return (
 			<div className="home">
@@ -26,7 +34,7 @@ export default class Home extends Component {
 					<li><MoiveItem/></li>
 				</ul>
 				<TabMenu current='movie' />
-				<RenderRoBody><CityLayer/></RenderRoBody>
+				{/* <RenderRoBody><CityLayer/></RenderRoBody> */}
 			</div>
 		);
 	};
